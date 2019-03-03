@@ -1,6 +1,16 @@
 import React from 'react';
+import GphApiClient from 'giphy-js-sdk-core';
 import logo from './logo.svg';
 import styles from './App.module.scss';
+
+const giphyClientSDK = GphApiClient(process.env.REACT_APP_GIPHY_API_KEY);
+giphyClientSDK.random('gifs', {})
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const App = () => (
   <div className={styles.App}>
