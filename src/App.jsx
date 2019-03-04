@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import GphApiClient from 'giphy-js-sdk-core';
 import logo from './logo.svg';
