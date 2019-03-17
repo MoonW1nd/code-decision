@@ -1,14 +1,15 @@
 // @flow
 import type Action from 'redux';
 import { FETCH_GIF_FULFILLED } from '../actions';
+import type { ResponseDataType } from '../types';
 
 export type ApiStateType = {
-  data: mixed[],
+  data: ResponseDataType,
   status: string
 };
 
 const initialState: ApiStateType = {
-  data: [],
+  data: {},
   status: 'pending',
 };
 
