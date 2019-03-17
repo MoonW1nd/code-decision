@@ -29,11 +29,11 @@
     }
   },
   "lint-staged": {
-    "*.{js, jsx}": [
+    "*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ],
-    "*.{sass, scss, css}": [
+    "*.{sass,scss,css}": [
       "stylelint --fix",
       "git add"
     ]
