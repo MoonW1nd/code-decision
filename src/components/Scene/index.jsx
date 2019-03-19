@@ -27,4 +27,5 @@ function mapStateToProps({ api }: StateType): ScenePropsType {
 
 const connectedScene = connect(mapStateToProps)(Scene);
 
+export default connectedScene;
 export { connectedScene as Scene };
