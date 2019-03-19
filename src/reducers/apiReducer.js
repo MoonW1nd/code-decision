@@ -1,15 +1,10 @@
 // @flow
 import type Action from 'redux';
 import { FETCH_GIF_FULFILLED } from '../actions';
-import type { ResponseDataType } from '../types';
-
-export type ApiStateType = {
-  data: ResponseDataType,
-  status: string
-};
+import type { ApiStateType } from '../types';
 
 const initialState: ApiStateType = {
-  data: {},
+  data: null,
   status: 'pending',
 };
 
@@ -19,7 +14,7 @@ export function apiReducer(state: ApiStateType = initialState, action: Action): 
       return {
         ...state,
         status: 'done',
-        data: action.payload,
+        data: action.payload.images.original,
       };
     }
 

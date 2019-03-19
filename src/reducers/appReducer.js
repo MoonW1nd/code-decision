@@ -1,12 +1,12 @@
 // @flow
 
-import type { StateType } from '../types';
+import type { AppStateType } from '../types';
 
-const initialState: StateType = {
+const initialState: AppStateType = {
   currentAnswer: '',
   currentGifUrl: '',
 };
 
-export function appReducer(state: StateType = initialState): StateType {
+export function appReducer(state: AppStateType = initialState): AppStateType {
   return state;
 }
