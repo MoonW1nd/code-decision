@@ -1,6 +1,9 @@
 // @flow
 
+import type { AppStateType } from './appState';
+import type { ApiStateType } from './apiState';
+
 export type StateType = {
-  currentAnswer: string,
-  currentGifUrl: string
+  app: AppStateType,
+  api: ApiStateType
 };

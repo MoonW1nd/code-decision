@@ -21,7 +21,9 @@
   "rules": {
     "no-param-reassign": ["error", { "props": false }],
     "no-use-before-define": "off",
+    "max-len": ["error", { "code": 120 }],
     "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
     "flowtype/boolean-style": [
       2,
       "boolean"
@@ -47,7 +49,8 @@
       2,
       "always",
       {
-        "annotateUndefined": "never"
+        "annotateUndefined": "never",
+        "excludeArrowFunctions": true
       }
     ],
     "flowtype/require-valid-file-annotation": 2,
