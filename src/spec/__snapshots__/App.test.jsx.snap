@@ -4,6 +4,13 @@ exports[`renders without crashing 1`] = `
 <div
   className="App"
 >
-  <Scene />
+  <Scene>
+    <Text
+      size="xxl"
+      text=""
+    >
+      Тест
+    </Text>
+  </Scene>
 </div>
 `;
