@@ -1,0 +1,12 @@
+@function adaptiveSize($desctopFontSize, $mobileFontSize) {
+  $minScreenWidth: 375;
+  $maxScreenWidth: 1370;
+  @return calc(#{$mobileFontSize}px + (#{$desctopFontSize} - #{$mobileFontSize}) *
+    (100vw - #{$minScreenWidth}px) / (#{$maxScreenWidth} - #{$minScreenWidth}));
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
