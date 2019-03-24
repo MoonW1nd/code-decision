@@ -1,5 +1,5 @@
 // @flow
 import { giphyClientSDK } from './index';
+import type { ResponseType } from '../types';
 
-export const getRandomGif = (): Promise<{}> => giphyClientSDK.random('gifs', {})
-  .then((response: {}): {} => response);
+export const getRandomGif = (): Promise<ResponseType> => giphyClientSDK.random('gifs', {});
