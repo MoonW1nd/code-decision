@@ -5,12 +5,7 @@ exports[`renders without crashing 1`] = `
   className="App"
 >
   <Scene>
-    <Text
-      size="xxl"
-      text=""
-    >
-      Тест
-    </Text>
+    <Connect(AnswerText) />
   </Scene>
 </div>
 `;

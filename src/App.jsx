@@ -3,12 +3,12 @@
 import React from 'react';
 import styles from './App.module.scss';
 import { Scene } from './components/Scene';
-import { Text } from './components/Text';
+import AnswerText from './containers/AnswerText';
 
 const App = (): React$Node => (
   <div className={styles.App}>
     <Scene>
-      <Text size="xxl">Тест</Text>
+      <AnswerText />
     </Scene>
   </div>
 );
