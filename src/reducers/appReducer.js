@@ -2,10 +2,10 @@
 import type Action from 'redux';
 import { FETCH_GIF_FULFILLED, FETCH_RANDOM_GIF_FULFILLED } from '../actions';
 import type { AppStateType } from '../types';
-import { getRandomInt } from '../utils';
+import { getRandomInt, getRandomQuery } from '../utils';
 
 const initialState: AppStateType = {
-  currentAnswer: 'fail',
+  currentAnswer: getRandomQuery(),
   currentGifUrl: '',
 };
 
