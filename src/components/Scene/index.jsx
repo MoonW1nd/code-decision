@@ -30,11 +30,8 @@ Scene.defaultProps = {
 };
 
 
-function mapStateToProps({ api }: StateType): ScenePropsType {
-  if (api.data == null) {
-    return { gifUrl: '' };
-  }
-  return { gifUrl: api.data.gif_url };
+function mapStateToProps({ app }: StateType): ScenePropsType {
+  return { gifUrl: app.currentGifUrl };
 }
 
 const connectedScene = connect(mapStateToProps)(Scene);
