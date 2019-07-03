@@ -16,7 +16,8 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-observable": "^1.0.0",
-    "rxjs": "6.x.x"
+    "rxjs": "6.x.x",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,7 +25,9 @@
     "test": "react-scripts test",
     "test:staged": "CI=true react-scripts test --bail --findRelatedTests",
     "eject": "react-scripts eject",
-    "flow": "flow "
+    "flow": "flow ",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -70,5 +73,6 @@
   },
   "peerDependencies": {
     "jest": "20.x"
-  }
+  },
+  "snyk": true
 }
