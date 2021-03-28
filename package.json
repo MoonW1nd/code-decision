@@ -1,74 +1,52 @@
 {
-  "name": "code-decision",
+  "name": "code-decision-ts",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
-    "enzyme-to-json": "^3.3.5",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^12.20.7",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "giphy-js-sdk-core": "^1.0.6",
-    "ramda": "^0.26.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-redux": "^6.0.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^4.0.0",
-    "recompose": "^0.30.0",
-    "redux": "^4.0.1",
-    "redux-observable": "^1.0.0",
-    "rxjs": "6.x.x"
+    "node-sass": "^5.0.0",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
+    "react-scripts": "4.0.3",
+    "redux-observable": "^1.2.0",
+    "rxjs": "^6.6.6",
+    "typescript": "^4.2.3",
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:staged": "CI=true react-scripts test --bail --findRelatedTests",
-    "eject": "react-scripts eject",
-    "flow": "flow "
+    "eject": "react-scripts eject"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './commitlint.config.js'"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add",
-      "npm run test:staged"
-    ],
-    "*.{sass,scss,css}": [
-      "stylelint --fix",
-      "git add"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "babel-eslint": "9.x",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-react-app": "^3.0.7",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
-    "flow-bin": "^0.93.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.4",
-    "node-sass": "^4.11.0",
-    "redux-devtools": "^3.5.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-recommended": "^2.1.0",
-    "stylelint-scss": "^3.5.3"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "peerDependencies": {
-    "jest": "20.x"
+  "devDependencies": {
+    "@types/ramda": "^0.27.39"
   }
 }
