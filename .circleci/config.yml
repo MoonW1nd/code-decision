@@ -35,4 +35,3 @@ jobs:
 
       # run tests!
       - run: CI=true npm run test
-      - run: npm run flow
