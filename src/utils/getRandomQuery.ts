@@ -1,6 +1,6 @@
 // @flow
-import { QUERY } from '../constants';
-import { getRandomInt } from '.';
+import { QUERY } from "../constants";
+import { getRandomInt } from ".";
 
 export const getRandomQuery = () => {
   const queryKeys = Object.keys(QUERY);
