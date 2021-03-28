@@ -6,10 +6,8 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.22",
-    "@types/node": "^12.20.7",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.1",
     "giphy-js-sdk-core": "^1.0.6",
     "node-sass": "^5.0.0",
     "ramda": "^0.27.1",
@@ -47,6 +45,12 @@
     ]
   },
   "devDependencies": {
-    "@types/ramda": "^0.27.39"
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^12.20.7",
+    "@types/ramda": "^0.27.39",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0"
   }
 }
