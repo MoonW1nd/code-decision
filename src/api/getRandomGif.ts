@@ -1,5 +1,5 @@
 import { giphyClientSDK } from "./index";
-import type { ResponseType } from "../types";
+import type { RandomResponseType } from "../types";
 
-export const getRandomGif = (): Promise<ResponseType> =>
+export const getRandomGif = (): Promise<RandomResponseType> =>
   giphyClientSDK.random("gifs", {});

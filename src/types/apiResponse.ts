@@ -34,6 +34,11 @@ export type ResponseDataType = {
 };
 
 export type ResponseType = {
+  data: ResponseDataType[];
+  meta: ResponseMetaType;
+};
+
+export type RandomResponseType = {
   data: ResponseDataType;
   meta: ResponseMetaType;
 };

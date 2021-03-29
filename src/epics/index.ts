@@ -1,4 +1,2 @@
-// @flow
-
-export * from './getRandomGif.epic';
-export * from './getGifByQuery.epic';
+export * from "./getRandomGif.epic";
+export * from "./getGifByQuery.epic";

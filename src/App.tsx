@@ -1,13 +1,10 @@
 import React from "react";
 import styles from "./App.module.scss";
-import { Scene } from "./components/Scene";
-import AnswerText from "./containers/AnswerText";
+import Scene from "./containers/Scene";
 
 const App = (): JSX.Element => (
   <div className={styles.App}>
-    <Scene>
-      <AnswerText />
-    </Scene>
+    <Scene />
   </div>
 );
 

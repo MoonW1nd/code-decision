@@ -1,8 +1,6 @@
 import React, { ReactNode } from "react";
-import { connect } from "react-redux";
 
 import styles from "./styles.module.scss";
-import type { StateType } from "../../types";
 import Text from "../Text";
 
 type ScenePropsType = {
@@ -25,11 +23,4 @@ Scene.defaultProps = {
   children: "",
 };
 
-function mapStateToProps({ app }: StateType): ScenePropsType {
-  return { gifUrl: app.currentGifUrl, text: app.currentAnswer };
-}
-
-const connectedScene = connect(mapStateToProps)(Scene);
-
-export default connectedScene;
-export { connectedScene as Scene };
+export default Scene;
