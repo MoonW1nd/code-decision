@@ -1,4 +1,2 @@
-// @flow
-
-export { appReducer } from './appReducer';
-export { apiReducer } from './apiReducer';
+export { appReducer } from "./appReducer";
+export { apiReducer } from "./apiReducer";

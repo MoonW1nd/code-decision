@@ -1,15 +1,20 @@
-// @flow
-import type Action from 'redux';
-import { FETCH_GIF_FULFILLED, FETCH_RANDOM_GIF_FULFILLED } from '../actions';
-import type { AppStateType } from '../types';
-import { getRandomInt, getRandomQuery } from '../utils';
+import {
+  Actions,
+  FETCH_GIF_FULFILLED,
+  FETCH_RANDOM_GIF_FULFILLED,
+} from "../actions";
+import type { AppStateType } from "../types";
+import { getRandomInt, getRandomQuery } from "../utils";
 
 const initialState: AppStateType = {
   currentAnswer: getRandomQuery(),
-  currentGifUrl: '',
+  currentGifUrl: "",
 };
 
-export function appReducer(state: AppStateType = initialState, action: Action): AppStateType {
+export function appReducer(
+  state: AppStateType = initialState,
+  action: Actions
+): AppStateType {
   switch (action.type) {
     case FETCH_GIF_FULFILLED: {
       const index = getRandomInt(0, action.payload.length - 1);
@@ -22,7 +27,7 @@ export function appReducer(state: AppStateType = initialState, action: Action): 
     case FETCH_RANDOM_GIF_FULFILLED: {
       return {
         ...state,
-        currentGifUrl: action.payload.images.original.gif_url,
+        currentGifUrl: action.payload.images.original.url,
       };
     }
 

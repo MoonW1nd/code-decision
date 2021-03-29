@@ -1,17 +1,16 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import type { StateType } from '../../types';
+import React from "react";
+import { connect } from "react-redux";
+import type { StateType } from "../../types";
 
-import { Text } from '../../components/Text';
+import { Text } from "../../components/Text";
 
 type AnswerTextType = {
-    text: string
+  text: string;
 };
 
-const AnswerText = ({ text, ...props }: AnswerTextType) => (
+const AnswerText = ({ text, ...props }: AnswerTextType): JSX.Element => (
   <Text text={text} size="xxl" {...props} />
 );
-
 
 function mapStateToProps({ app }: StateType): AnswerTextType {
   return { text: app.currentAnswer };

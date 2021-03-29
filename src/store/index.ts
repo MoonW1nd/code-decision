@@ -10,8 +10,9 @@ import { combineEpics, createEpicMiddleware } from "redux-observable";
 import { appReducer, apiReducer } from "../reducers";
 import { initialGetGifByQueryEpic, getGifByQueryEpic } from "../epics";
 import type { StateType } from "../types";
+import { Actions } from "../actions";
 
-export function configureStore(): Store<StateType> {
+export function configureStore(): Store<StateType, Actions> {
   const rootReducer = combineReducers({
     app: appReducer,
     api: apiReducer,

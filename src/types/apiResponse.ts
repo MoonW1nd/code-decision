@@ -9,14 +9,8 @@ export type ResponseUserType = {
 };
 
 export type ResponseImageDataType = {
-  gif_url: string;
-  height: string;
-  width: string;
-};
-
-export type ResponseOriginalDataType = {
   frames: string;
-  gif_url: string;
+  url: string;
   mp4: string;
   height: string;
   width: string;
@@ -28,12 +22,12 @@ export type ResponseImagesType = {
   fixed_width_downsampled: ResponseImageDataType;
   fixed_width_small: ResponseImageDataType;
   fixed_width_small_still: ResponseImageDataType;
+  original: ResponseImageDataType;
   id: string;
-  original: {};
 };
 
 export type ResponseDataType = {
-  images: number;
+  images: ResponseImagesType;
   type: string;
   url: string;
   user: ResponseUserType;
