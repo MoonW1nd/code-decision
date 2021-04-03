@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./App.module.scss";
-import { Scene } from "./components/Scene";
-import AnswerText from "./containers/AnswerText";
+import AnswerText from "../AnswerText";
+import Scene from "../Scene";
+
+import styles from "./styles.module.scss";
 
 const App = (): JSX.Element => (
   <div className={styles.App}>

@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import "./index.css";
-import App from "./App";
-import { Provider } from "react-redux";
+import App from "./layout/App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./store";
+import { RecoilRoot } from "recoil";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <RecoilRoot>
       <App />
-    </Provider>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );
