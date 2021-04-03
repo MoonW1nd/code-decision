@@ -1,26 +1,17 @@
-import React, { ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
+import type { IText } from "../interfaces";
 import styles from "./styles.module.scss";
 
-type TextSizeType = "xs" | "s" | "m" | "l" | "xl" | "xxl";
+export const Text: IText = ({ text, as = "p", children, size }) => {
+  const Tag = as;
 
-type TextPropsType = {
-  text?: string;
-  size: TextSizeType;
-  children?: ReactNode;
-};
-
-export const Text = ({ text, children, size }: TextPropsType): JSX.Element => (
-  <div>
-    <div className={`${styles.text} ${styles[`fontSize_${size}`]}`}>
+  return (
+    <Tag className={`${styles.text} ${styles[`fontSize_${size}`]}`}>
       {text}
-      {children}
-    </div>
-  </div>
-);
 
-Text.defaultProps = {
-  children: "",
-  text: "",
+      {children}
+    </Tag>
+  );
 };
 
 export default Text;

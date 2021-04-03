@@ -5,22 +5,20 @@ import Text from "../Text";
 
 type ScenePropsType = {
   gifUrl: string;
-  text: string;
   children?: ReactNode;
 };
 
-const Scene = ({ gifUrl, text }: ScenePropsType): JSX.Element => (
+const Scene = ({ gifUrl, children }: ScenePropsType): JSX.Element => (
   <div className={styles.root}>
     <img src={gifUrl} className={styles.image} alt="gif" />
 
     <div className={styles.contentArea}>
-      <Text text={text} size="xxl" />
+      <Text text="chooser" size="m" />
+
+      {children}
     </div>
   </div>
 );
-
-Scene.defaultProps = {
-  children: "",
-};
+// <Text text={text} size="xxl" />
 
 export default Scene;
